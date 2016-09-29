@@ -13,12 +13,42 @@ public class Main {
         h.makeSound();
         s.makeSound();
 
+
+        // anonymous classes
+
+        Mammal d2 = new Mammal() {
+            @Override
+            void makeSound() {
+                System.out.println("Bark!!!!!!");
+            }
+        };
+
+        Bird h2 = new Bird() {
+            @Override
+            void makeSound() {
+                System.out.println("CCAAAAaaaaawwwwwww!!!!!");
+            }
+        };
+
+        Reptile s2 = new Reptile() {
+            @Override
+            void makeSound() {
+                System.out.println("SŚssssSSSß");
+            }
+        };
+
+        d2.makeSound();
+        h2.makeSound();
+        s2.makeSound();
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Type an animal name:");
         String name = scanner.nextLine();
         Animal a = createAnimal(name);
         System.out.println(a);
+
+
 
     }
 
